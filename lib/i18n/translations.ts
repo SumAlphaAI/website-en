@@ -44,11 +44,11 @@ export const translations = {
     },
     ecosystem: {
       title: 'Ecosystem Architecture',
-      subtitle: 'Data Perception (MCP) + Strategy Logic (Skills) + Execution Runtime (LoongClaw)',
+      subtitle: 'Data Perception (MCP) + Strategy Logic (Skills) + Execution Runtime (Core)',
       layers: {
         perception: {
           title: 'Perception Layer',
-          desc: 'LoongClaw Gateway acting as the "Eyes". Real-time data from Blockchain nodes, CEX, and Web2 markets via MCP.',
+          desc: 'Core Gateway acting as the "Eyes". Real-time data from Blockchain nodes, CEX, and Web2 markets via MCP.',
         },
         skills: {
           title: 'Skill Layer',
