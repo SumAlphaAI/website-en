@@ -65,22 +65,22 @@ export const translations = {
       subtitle: 'Autonomous Synergy & Human Co-Pilot',
       alice: {
         name: 'Alice',
-        role: 'Intelligence Officer (Perception)',
+        role: 'Intelligence Officer',
         desc: 'The eyes of the squad. Cleans data, monitors sentiment, and tracks narratives, feeding high-quality intelligence directly to Bob.',
       },
       bob: {
         name: 'Bob',
-        role: 'Strategy Analyst (Strategy)',
+        role: 'Strategy Analyst',
         desc: 'The brain of the squad. Ingests Alice\'s intelligence for factor mining and code evolution, generating dynamic strategies for Cindy to evaluate.',
       },
       cindy: {
         name: 'Cindy',
-        role: 'Risk Officer (Risk)',
+        role: 'Risk Officer',
         desc: 'The conscience of the squad. Subjects Bob\'s strategies to rigorous backtesting and veto-based risk control, ensuring safe passage for David.',
       },
       david: {
         name: 'David',
-        role: 'Trader (Execution)',
+        role: 'Trader',
         desc: 'The hands of the squad. Takes Cindy\'s approved parameters to execute trades flawlessly, optimizing gas and controlling slippage.',
       },
     },
