@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100 tracking-tight selection:bg-purple-500/30 selection:text-white`}
+        className={`${inter.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100 tracking-tight selection:bg-purple-500/30 selection:text-white overflow-x-hidden`}
       >
         <LanguageProvider>
           {children}
