@@ -84,6 +84,29 @@ export const translations = {
         desc: 'The hands of the squad. Takes Cindy\'s approved parameters to execute trades flawlessly, optimizing gas and controlling slippage.',
       },
     },
+    tradFi: {
+      tag: 'SumAlpha Traditional Finance Ecosystem',
+      title: 'Advanced AI Trading in Traditional Finance',
+      description: 'SumAlpha applies its advanced multi-agent framework to traditional finance, analyzing global equities, derivatives, and macro markets to uncover edge and alpha.',
+      categories: {
+        data: {
+          title: 'Data & Narrative',
+          desc: 'Global Equities Market Data, Real-time Macro Events, and Semantic Sentiment Tracking.',
+        },
+        quant: {
+          title: 'Quantitative Models',
+          desc: 'Time-Series Market Forecasting, DCF Valuation, and AI-Factor Mining.',
+        },
+        exec: {
+          title: 'Master Personas',
+          desc: 'Simulate decision logic from 10+ investment masters through multi-agent orchestration.',
+        },
+        research: {
+          title: 'Deep Research',
+          desc: 'Auto-generated comprehensive stock analysis covering technicals and fundamentals.',
+        }
+      }
+    },
     capabilities: {
       title: 'Platform Capabilities',
       subtitle: 'What SumAlpha Can Do',
