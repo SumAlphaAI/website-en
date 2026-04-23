@@ -22,9 +22,9 @@ export const translations = {
     },
     valueProp: {
       yield: {
-        title: 'SumAlpha Basic',
-        subtitle: 'The Foundation (Free)',
-        description: 'Built-in desktop tools for low-risk compounding. Focus on stable, automated yield generation via Staking and Lending.',
+        title: 'SumAlpha Desktop',
+        subtitle: 'SumAlpha Basic (Free)',
+        description: 'Built-in desktop modules tailored for geeks, DeFi retail users, and junior developers. Focuses on low-risk compounding and on-chain crypto interactions.',
         list: [
           'Auto-Compounding',
           'Rate Arbitrage Lending',
@@ -32,12 +32,12 @@ export const translations = {
         ],
       },
       alpha: {
-        title: 'SumAlpha Pro',
-        subtitle: 'The Expansion (Paid)',
-        description: 'Advanced AaaS platform unlocking Python Sidecars for cross-market arbitrage, high-frequency strategies, and multi-agent collaboration.',
+        title: 'SumAlpha Desktop & Web AaaS',
+        subtitle: 'SumAlpha Pro (Subscription)',
+        description: 'Advanced ecosystem for institutions and professional traders. Unlocks Python/Node.js Sidecars for multi-market edge discovery across Crypto, Stocks, and Derivatives.',
         list: [
           'Cross-Market Arbitrage',
-          'AI-Factor Mining (Python Sidecar)',
+          'AI-Factor Mining',
           'The Quad-Squad Collaboration',
         ],
       },
