@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: 'SumAlpha - The Sum of All Alpha',
-  description: 'Automated asset management matrix bridging Web2 and Web3. Maximize your returns with SumAlpha.',
-  keywords: ['DeFi', 'Asset Management', 'Alpha', 'Yield', 'Crypto', 'Web3', 'Agent'],
+  description: 'Automated asset management matrix bridging Web3 DeFi and Traditional Finance. Maximize your edge with SumAlpha AaaS and an Open Skill Ecosystem.',
+  keywords: ['DeFi', 'Asset Management', 'TradFi', 'Alpha', 'Yield', 'Crypto', 'Web3', 'Agent'],
 };
 
 export default function RootLayout({

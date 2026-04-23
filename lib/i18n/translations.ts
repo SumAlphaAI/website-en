@@ -13,7 +13,7 @@ export const translations = {
     hero: {
       title: 'SumAlpha',
       slogan: 'The Sum of All Alpha',
-      description: 'The automated asset management matrix bridging Web2 and Web3. Powered by AaaS (Agent as a Service) architecture, we integrate MCP data perception and modular Skills to aggregate strategies across all markets, maximizing your returns through the Quad-Squad multi-agent collaboration.',
+      description: 'The automated asset management matrix bridging Web3 DeFi and Traditional Finance. Powered by an AaaS (Agent as a Service) architecture, we seamlessly integrate MPC execution, an Open Skill Ecosystem, and the Multi-Agent Quad-Squad to maximize your edge across all markets.',
       getStarted: 'Get Started',
       readDocs: 'Read Docs',
     },
