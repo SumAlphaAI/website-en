@@ -133,7 +133,7 @@ export const BlockchainDefiEcosystem = () => {
         <div className="absolute left-1/2 top-32 h-72 w-full max-w-4xl -translate-x-1/2 rounded-full bg-purple-500/10 blur-3xl" />
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="py-12 md:py-20 border-t border-slate-800">
           <div className="max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
