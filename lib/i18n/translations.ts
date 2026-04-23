@@ -61,27 +61,27 @@ export const translations = {
       },
     },
     agents: {
-      title: 'The Quad-Squad',
-      subtitle: 'Human-Agent Co-Management',
+      title: 'The Multi-Agent Quad-Squad',
+      subtitle: 'Autonomous Synergy & Human Co-Pilot',
       alice: {
         name: 'Alice',
         role: 'Intelligence Officer (Perception)',
-        desc: 'Data cleaning, sentiment monitoring, and narrative tracking. The eyes of the squad.',
+        desc: 'The eyes of the squad. Cleans data, monitors sentiment, and tracks narratives, feeding high-quality intelligence directly to Bob.',
       },
       bob: {
         name: 'Bob',
         role: 'Strategy Analyst (Strategy)',
-        desc: 'Strategy calculation, factor mining, and code evolution. The brain of the squad.',
+        desc: 'The brain of the squad. Ingests Alice\'s intelligence for factor mining and code evolution, generating dynamic strategies for Cindy to evaluate.',
       },
       cindy: {
         name: 'Cindy',
         role: 'Risk Officer (Risk)',
-        desc: 'Veto-based review, backtesting simulation, and risk control. The conscience of the squad.',
+        desc: 'The conscience of the squad. Subjects Bob\'s strategies to rigorous backtesting and veto-based risk control, ensuring safe passage for David.',
       },
       david: {
         name: 'David',
         role: 'Trader (Execution)',
-        desc: 'Trade execution, slippage control, and gas optimization. The hands of the squad.',
+        desc: 'The hands of the squad. Takes Cindy\'s approved parameters to execute trades flawlessly, optimizing gas and controlling slippage.',
       },
     },
     capabilities: {
