@@ -82,8 +82,8 @@ export const Particles = ({
       contextRef.current.translate(translateX, translateY);
       contextRef.current.beginPath();
       contextRef.current.arc(x, y, size, 0, 2 * Math.PI);
-      // Light theme: use ink particles (subtle)
-      contextRef.current.fillStyle = `rgba(11, 18, 32, ${alpha * 0.35})`;
+      // Light theme: use ink particles (very subtle, Linear-ish)
+      contextRef.current.fillStyle = `rgba(11, 18, 32, ${alpha * 0.18})`;
       contextRef.current.fill();
       contextRef.current.setTransform(dprRef.current, 0, 0, dprRef.current, 0, 0);
       if (!update) {

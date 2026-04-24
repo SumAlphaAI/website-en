@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Bricolage_Grotesque, IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
+import { IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 
@@ -10,11 +10,11 @@ const sans = IBM_Plex_Sans({
   weight: ['300', '400', '500', '600', '700'],
 });
 
-const display = Bricolage_Grotesque({
+const display = IBM_Plex_Sans({
   variable: '--font-display',
   subsets: ['latin'],
   display: 'swap',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['500', '600', '700'],
 });
 
 const mono = IBM_Plex_Mono({

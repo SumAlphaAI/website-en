@@ -70,18 +70,9 @@ export const Highlighter = ({ children, className = '', refresh = false }: Highl
 export const HighlighterItem = ({ children, className = '' }: { children: React.ReactNode; className?: string }) => {
   return (
     <div
-      className={`group relative h-full overflow-hidden rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-px ${className}`}
+      className={`group relative h-full overflow-hidden rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-px transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[var(--shadow)] ${className}`}
     >
-      {/* Mouse-tracked spotlight (subtle, warm) */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-        style={{
-          background:
-            'radial-gradient(520px circle at var(--mouse-x) var(--mouse-y), rgba(37, 99, 235, 0.12), transparent 60%)',
-        }}
-      />
-
-      <div className="relative h-full rounded-[inherit] bg-[color:var(--panel-2)]">
+      <div className="relative h-full rounded-[inherit] bg-[color:var(--panel)]">
         {children}
       </div>
     </div>

@@ -40,14 +40,14 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-30">
-      <div className="pointer-events-none absolute inset-0 bg-[color:var(--background)]/60 backdrop-blur-md border-b border-[color:var(--line)]" />
+      <div className="pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-md border-b border-[color:var(--line)]" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Site branding */}
           <div className="flex-1">
             <Link href="/" className="inline-flex" aria-label="SumAlpha">
-              <span className="text-xl md:text-2xl font-semibold tracking-tight text-[color:var(--foreground)] font-[family:var(--font-display)]">
+              <span className="text-xl md:text-2xl font-semibold tracking-tight text-[color:var(--foreground)]">
                 SumAlpha
               </span>
             </Link>

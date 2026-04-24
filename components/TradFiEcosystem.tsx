@@ -81,23 +81,23 @@ export const TradFiEcosystem = () => {
             ))}
           </Highlighter>
 
-          <div className="mt-16 bg-slate-800/30 rounded-3xl border border-slate-700/50 p-8 md:p-12 overflow-hidden relative backdrop-blur-sm">
-            <div className="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-slate-800/50 to-transparent pointer-events-none" />
+          <div className="mt-16 rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 md:p-12 overflow-hidden relative shadow-sm">
+            <div className="absolute right-0 top-0 h-full w-1/2 bg-linear-to-l from-[color:var(--panel-2)] to-transparent pointer-events-none" />
             <div className="relative z-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-slate-100 mb-4 flex items-center gap-3">
-                  <Bot className="w-8 h-8 text-blue-400" />
+                <h3 className="text-2xl font-semibold text-[color:var(--foreground)] mb-4 flex items-center gap-3">
+                  <Bot className="w-8 h-8 text-[color:var(--accent)]" />
                   Advanced Trading & Analysis
                 </h3>
-                <p className="text-slate-400 text-lg leading-relaxed">
+                <p className="text-[color:var(--muted)] text-lg leading-relaxed">
                   SumAlpha extends its capabilities to traditional finance by incorporating robust time-series forecasting, automated stock valuation models (DCF), and comprehensive technical/fundamental analysis workflows to empower your edge.
                 </p>
               </div>
               <div className="flex shrink-0 gap-4 flex-wrap justify-end">
-                <div className="px-6 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 font-medium font-mono text-sm">
+                <div className="px-6 py-3 rounded-xl bg-[color:var(--panel-2)] border border-[color:var(--line)] text-[color:var(--foreground)]/80 font-medium font-mono text-sm">
                   Deep Research
                 </div>
-                <div className="px-6 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-300 font-medium font-mono text-sm">
+                <div className="px-6 py-3 rounded-xl bg-[color:var(--panel-2)] border border-[color:var(--line)] text-[color:var(--foreground)]/80 font-medium font-mono text-sm">
                   DCF Valuation
                 </div>
               </div>

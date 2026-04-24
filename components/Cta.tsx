@@ -16,7 +16,7 @@ export const Cta = () => {
         email="hello@sumalpha.ai"
       />
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[color:var(--panel)] opacity-60" />
+        <div className="absolute inset-0 bg-white" />
         <div className="absolute inset-x-0 top-0 h-px bg-[color:var(--line)]" />
         <div className="absolute inset-x-0 bottom-0 h-px bg-[color:var(--line)]" />
       </div>

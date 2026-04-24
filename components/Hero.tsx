@@ -13,7 +13,7 @@ export const Hero = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Particles animation */}
-        <Particles className="absolute inset-0 -z-10" quantity={18} />
+        <Particles className="absolute inset-0 -z-10" quantity={10} />
 
         <div className="pt-32 pb-16 md:pt-52 md:pb-32">
           
@@ -27,9 +27,12 @@ export const Hero = () => {
                 className="mb-6"
             >
                 <div className="inline-flex">
-                    <Link className="btn-sm btn-ghost bg-[color:var(--panel)] hover:bg-[color:var(--panel)]/80 text-[color:var(--muted)] hover:text-[color:var(--foreground)]" href="#">
+                    <Link
+                      className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-white/70 px-3 py-1 text-sm text-[color:var(--muted)] shadow-sm hover:bg-white transition"
+                      href="#"
+                    >
                         <span className="relative inline-flex items-center">
-                            SumAlpha Desktop Preview <span className="tracking-normal text-[color:var(--accent)] transition-transform duration-150 ease-in-out ml-1">-&gt;</span>
+                            SumAlpha Desktop Preview <span className="tracking-normal text-[color:var(--accent)] ml-1">-&gt;</span>
                         </span>
                     </Link>
                 </div>
@@ -65,7 +68,7 @@ export const Hero = () => {
                     </Link>
                 </div>
                 <div>
-                    <Link className="btn btn-ghost w-full justify-center text-[color:var(--foreground)] hover:text-[color:var(--foreground)]" href="https://docs.sumalpha.ai">
+                    <Link className="btn btn-ghost w-full justify-center" href="https://docs.sumalpha.ai">
                         <svg className="shrink-0 fill-slate-300 mr-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                             <path d="m1.999 0 1 2-1 2 2-1 2 1-1-2 1-2-2 1zM11.999 0l1 2-1 2 2-1 2 1-1-2 1-2-2 1zM11.999 10l1 2-1 2 2-1 2 1-1-2 1-2-2 1zM6.292 7.586l2.646-2.647L11.06 7.06 8.413 9.707zM0 13.878l5.586-5.586 2.122 2.121L2.12 16z" />
                         </svg>
