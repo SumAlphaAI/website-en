@@ -1,17 +1,26 @@
 import type { Metadata } from 'next';
-import { Inter, Geist_Mono } from 'next/font/google';
+import { Bricolage_Grotesque, IBM_Plex_Mono, IBM_Plex_Sans } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/lib/i18n/LanguageContext';
 
-const inter = Inter({
-  variable: '--font-inter',
+const sans = IBM_Plex_Sans({
+  variable: '--font-sans',
   subsets: ['latin'],
   display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+const display = Bricolage_Grotesque({
+  variable: '--font-display',
   subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+});
+
+const mono = IBM_Plex_Mono({
+  variable: '--font-mono',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
 });
 
 export const metadata: Metadata = {
@@ -28,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${inter.variable} ${geistMono.variable} antialiased bg-slate-900 text-slate-100 tracking-tight selection:bg-purple-500/30 selection:text-white overflow-x-hidden`}
+        className={`${sans.variable} ${display.variable} ${mono.variable} antialiased overflow-x-hidden`}
       >
         <LanguageProvider>
           {children}

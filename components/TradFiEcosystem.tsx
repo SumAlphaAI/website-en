@@ -1,7 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/lib/i18n/LanguageContext';
-import { LineChart, Search, Database, Calculator, BookOpen, Bot } from 'lucide-react';
+import { LineChart, Database, Calculator, BookOpen, Bot } from 'lucide-react';
 import { Highlighter, HighlighterItem } from './Highlighter';
 
 export const TradFiEcosystem = () => {
@@ -10,21 +10,20 @@ export const TradFiEcosystem = () => {
   return (
     <section id="tradfi-ecosystem" className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/4 top-10 h-96 w-full max-w-4xl -translate-x-1/2 rounded-full bg-blue-500/10 blur-[100px]" />
-        <div className="absolute right-0 bottom-10 h-80 w-full max-w-3xl translate-x-1/3 rounded-full bg-emerald-500/10 blur-[100px]" />
+        <div className="absolute inset-0 bg-[color:var(--panel-2)] opacity-35" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="py-16 md:py-32 border-t border-slate-800/60 relative">
+        <div className="py-16 md:py-32 border-t border-[color:var(--line)] relative">
           
           <div className="max-w-4xl mx-auto text-center pb-16 md:pb-24">
-            <div className="inline-flex items-center rounded-full border border-blue-400/20 bg-blue-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-blue-300 mb-6">
+            <div className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-[color:var(--panel)] px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--muted)] mb-6">
               {t.tradFi?.tag || 'SumAlpha Cross-Market Ecosystem'}
             </div>
-            <h2 className="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-200 to-slate-200/60 pb-4">
+            <h2 className="h2 text-[color:var(--foreground)] pb-4">
               {t.tradFi?.title || 'Bridging Web3 Alpha with Traditional Finance'}
             </h2>
-            <p className="text-xl text-slate-400 leading-relaxed">
+            <p className="text-xl text-[color:var(--muted)] leading-relaxed">
               {t.tradFi?.description || 'Beyond blockchain. SumAlpha Pro unlocks Python and Node.js Sidecars, extending our multi-agent framework into global equities, derivatives, and macro markets.'}
             </p>
           </div>

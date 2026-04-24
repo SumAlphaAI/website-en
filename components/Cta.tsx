@@ -15,19 +15,23 @@ export const Cta = () => {
         onClose={() => setIsModalOpen(false)} 
         email="hello@sumalpha.ai"
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-brand-blue to-brand-purple/10 pointer-events-none" />
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 bg-[color:var(--panel)] opacity-60" />
+        <div className="absolute inset-x-0 top-0 h-px bg-[color:var(--line)]" />
+        <div className="absolute inset-x-0 bottom-0 h-px bg-[color:var(--line)]" />
+      </div>
       <div className="max-w-6xl mx-auto px-4 text-center relative z-10">
-        <h2 className="text-4xl font-bold text-white mb-6">{t.cta.title}</h2>
-        <p className="text-slate-400 text-lg mb-10">
+        <h2 className="h2 text-[color:var(--foreground)] mb-6">{t.cta.title}</h2>
+        <p className="text-[color:var(--muted)] text-lg mb-10 leading-relaxed">
           {t.cta.descriptionLine1}
           <br />
           {t.cta.descriptionLine2}
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <button className="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition-all shadow-lg shadow-emerald-500/20">
+          <button className="btn btn-primary w-full sm:w-auto px-8 py-4 rounded-2xl">
             {t.cta.download}
           </button>
-          <button onClick={() => setIsModalOpen(true)} className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/10 text-white font-semibold transition-all flex items-center justify-center">
+          <button onClick={() => setIsModalOpen(true)} className="btn btn-ghost w-full sm:w-auto px-8 py-4 rounded-2xl flex items-center justify-center">
             {t.cta.contact}
           </button>
         </div>

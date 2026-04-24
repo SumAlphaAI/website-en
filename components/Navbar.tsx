@@ -39,14 +39,15 @@ export const Navbar = () => {
   ];
 
   return (
-    <header className="absolute w-full z-30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+    <header className="fixed top-0 left-0 w-full z-30">
+      <div className="pointer-events-none absolute inset-0 bg-[color:var(--background)]/60 backdrop-blur-md border-b border-[color:var(--line)]" />
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Site branding */}
           <div className="flex-1">
             <Link href="/" className="inline-flex" aria-label="SumAlpha">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200">
+              <span className="text-xl md:text-2xl font-semibold tracking-tight text-[color:var(--foreground)] font-[family:var(--font-display)]">
                 SumAlpha
               </span>
             </Link>
@@ -59,7 +60,7 @@ export const Navbar = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-medium text-sm text-slate-300 hover:text-white mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                    className="font-medium text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] mx-4 lg:mx-5 transition duration-150 ease-in-out"
                   >
                     {link.label}
                   </Link>
@@ -73,11 +74,9 @@ export const Navbar = () => {
             <li>
               <Link
                 href="#"
-                className="btn-sm text-slate-300 hover:text-white transition duration-150 ease-in-out w-full group relative before:absolute before:inset-0 before:bg-slate-800/30 before:rounded-full before:pointer-events-none btn-gradient"
+                className="btn-sm btn-primary"
               >
-                <span className="relative inline-flex items-center">
-                  {t.nav.launchApp}
-                </span>
+                <span className="inline-flex items-center">{t.nav.launchApp}</span>
               </Link>
             </li>
           </ul>
@@ -116,12 +115,12 @@ export const Navbar = () => {
               id="mobile-nav"
               className={`absolute top-full z-20 left-0 w-full px-4 sm:px-6 overflow-hidden transition-all duration-300 ease-in-out ${mobileNavOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-80'}`}
             >
-              <ul className="border border-transparent rounded-lg px-4 py-1.5 btn-gradient">
+              <ul className="rounded-2xl px-4 py-2 bg-[color:var(--background)]/85 backdrop-blur-md border border-[color:var(--line)] shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
                 {navLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5"
+                      className="flex font-medium text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] py-2"
                       onClick={() => setMobileNavOpen(false)}
                     >
                       {link.label}
@@ -131,7 +130,7 @@ export const Navbar = () => {
                 <li>
                     <Link
                       href="#"
-                      className="flex font-medium text-sm text-slate-300 hover:text-white py-1.5"
+                      className="flex font-medium text-sm text-[color:var(--foreground)] py-2"
                       onClick={() => setMobileNavOpen(false)}
                     >
                       {t.nav.launchApp}

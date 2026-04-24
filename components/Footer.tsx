@@ -29,34 +29,34 @@ export const Footer = () => {
   return (
     <footer className="relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-16 border-t border-slate-800">
+        <div className="py-12 md:py-16 border-t border-[color:var(--line)]">
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-8">
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-purple-200">
+              <span className="text-xl md:text-2xl font-semibold tracking-tight text-[color:var(--foreground)] font-[family:var(--font-display)]">
                 SumAlpha
               </span>
             </div>
 
             <div className="flex gap-6">
-              <Link href="https://x.com/SumAlphaAI" target="_blank" className="flex justify-center items-center text-slate-500 hover:text-purple-500 transition duration-150 ease-in-out" aria-label="X">
+              <Link href="https://x.com/SumAlphaAI" target="_blank" className="flex justify-center items-center text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition duration-150 ease-in-out" aria-label="X">
                 <X className="w-5 h-5" />
               </Link>
-              <Link href="https://github.com/SumAlphaAI" target="_blank" className="flex justify-center items-center text-slate-500 hover:text-purple-500 transition duration-150 ease-in-out" aria-label="Github">
+              <Link href="https://github.com/SumAlphaAI" target="_blank" className="flex justify-center items-center text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition duration-150 ease-in-out" aria-label="Github">
                 <GithubIcon className="w-5 h-5" />
               </Link>
               <Tooltip content="hello@sumalpha.ai">
-                <Link href="#" onClick={(e) => e.preventDefault()} className="flex justify-center items-center text-slate-500 hover:text-purple-500 transition duration-150 ease-in-out" aria-label="Email">
+                <Link href="#" onClick={(e) => e.preventDefault()} className="flex justify-center items-center text-[color:var(--muted)] hover:text-[color:var(--foreground)] transition duration-150 ease-in-out" aria-label="Email">
                   <Mail className="w-5 h-5" />
                 </Link>
               </Tooltip>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-[color:var(--muted)]">
             <p>{t.footer.copyright}</p>
             <div className="flex gap-6">
-              <Link href="/privacy" className="hover:text-slate-300 transition-colors">{t.footer.privacy}</Link>
-              <Link href="/terms" className="hover:text-slate-300 transition-colors">{t.footer.terms}</Link>
+              <Link href="/privacy" className="hover:text-[color:var(--foreground)] transition-colors">{t.footer.privacy}</Link>
+              <Link href="/terms" className="hover:text-[color:var(--foreground)] transition-colors">{t.footer.terms}</Link>
             </div>
           </div>
         </div>

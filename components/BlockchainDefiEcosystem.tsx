@@ -127,22 +127,20 @@ export const BlockchainDefiEcosystem = () => {
   return (
     <section id="blockchain-defi" className="relative overflow-hidden">
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute inset-x-0 top-0 h-32 bg-linear-to-b from-cyan-500/10 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-linear-to-t from-purple-500/10 to-transparent" />
-        <div className="absolute left-1/2 top-10 h-80 w-full max-w-5xl -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute left-1/2 top-32 h-72 w-full max-w-4xl -translate-x-1/2 rounded-full bg-purple-500/10 blur-3xl" />
+        <div className="absolute inset-0 bg-[color:var(--panel-2)] opacity-45" />
+        <div className="absolute inset-x-0 top-0 h-px bg-[color:var(--line)]" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="py-12 md:py-20 border-t border-slate-800">
+        <div className="py-12 md:py-20 border-t border-[color:var(--line)]">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-300">
+            <div className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-[color:var(--panel)] px-4 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-[color:var(--muted)]">
               SumAlpha Blockchain &amp; DeFi Ecosystem
             </div>
-            <h2 className="h2 bg-clip-text text-transparent bg-linear-to-r from-slate-200/60 via-slate-100 to-slate-200/60 pt-6 pb-4">
+            <h2 className="h2 text-[color:var(--foreground)] pt-6 pb-4">
               Multi-chain aggregation with a one-stop DeFi entry point
             </h2>
-            <p className="text-lg text-slate-400">
+            <p className="text-lg text-[color:var(--muted)]">
               Bridging major EVM networks, Solana, and Sui, our infrastructure unifies deep DeFi integration, intent-driven skill discovery, and MPC-backed secure execution into a single, powerful gateway.
             </p>
           </div>
