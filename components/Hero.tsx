@@ -10,8 +10,8 @@ export const Hero = () => {
   const { t } = useLanguage();
 
   return (
-    <section>
-      <div className="relative max-w-6xl mx-auto px-4 sm:px-6">
+    <section className="relative overflow-hidden">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Particles animation */}
         <Particles className="absolute inset-0 -z-10" quantity={50} />

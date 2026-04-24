@@ -9,7 +9,7 @@ export const Features = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="features" className="relative">
+    <section id="features" className="relative overflow-hidden">
       
       {/* Background illustration */}
       <div className="absolute inset-0 -z-10 -mx-28 rounded-t-[3rem] pointer-events-none overflow-hidden" aria-hidden="true">
