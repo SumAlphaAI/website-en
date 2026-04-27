@@ -2,10 +2,13 @@
 
 import Link from 'next/link';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { useTheme } from '@/lib/theme/ThemeContext';
 import { useState, useRef, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 
 export const Navbar = () => {
   const { t } = useLanguage();
+  const { theme, toggleTheme } = useTheme();
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const trigger = useRef<HTMLButtonElement>(null);
   const mobileNav = useRef<HTMLDivElement>(null);
@@ -40,7 +43,7 @@ export const Navbar = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full z-30">
-      <div className="pointer-events-none absolute inset-0 bg-white/70 backdrop-blur-md border-b border-[color:var(--line)]" />
+      <div className="pointer-events-none absolute inset-0 bg-[color:var(--panel)]/70 backdrop-blur-md border-b border-[color:var(--line)]" />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
         <div className="flex items-center justify-between h-16 md:h-20">
 
@@ -60,7 +63,7 @@ export const Navbar = () => {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="font-medium text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] mx-4 lg:mx-5 transition duration-150 ease-in-out"
+                    className="nav-link mx-4 lg:mx-5"
                   >
                     {link.label}
                   </Link>
@@ -71,6 +74,19 @@ export const Navbar = () => {
 
           {/* Desktop sign in links */}
           <ul className="flex-1 hidden md:flex justify-end items-center gap-6">
+            <li>
+              <button
+                onClick={toggleTheme}
+                className="theme-toggle"
+                aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              >
+                {theme === 'light' ? (
+                  <Moon className="w-5 h-5" />
+                ) : (
+                  <Sun className="w-5 h-5" />
+                )}
+              </button>
+            </li>
             <li>
               <Link
                 href="#"
@@ -127,6 +143,19 @@ export const Navbar = () => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <button
+                    onClick={toggleTheme}
+                    className="flex font-medium text-sm text-[color:var(--muted)] hover:text-[color:var(--foreground)] py-2 items-center gap-2"
+                  >
+                    {theme === 'light' ? (
+                      <Moon className="w-4 h-4" />
+                    ) : (
+                      <Sun className="w-4 h-4" />
+                    )}
+                    {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+                  </button>
+                </li>
                 <li>
                     <Link
                       href="#"

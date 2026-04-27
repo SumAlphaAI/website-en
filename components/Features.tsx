@@ -76,14 +76,18 @@ export const Features = () => {
               <div className="hidden md:block">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent-2)]/10 to-[color:var(--accent)]/10 rounded-3xl blur-2xl" />
-                  <div className="relative rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 shadow-lg">
+                  <div className="relative rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 shadow-lg card-interactive">
                     <div className="space-y-4">
                       {[
                         { title: 'Risk Assessment', desc: 'Real-time portfolio analysis' },
                         { title: 'Position Sizing', desc: 'Optimal allocation strategy' },
                         { title: 'Stop Loss', desc: 'Dynamic risk management' }
                       ].map((item, idx) => (
-                        <div key={idx} className="flex items-center gap-4 p-4 rounded-xl bg-[color:var(--panel-2)] border border-[color:var(--line)]">
+                        <motion.div 
+                          key={idx} 
+                          whileHover={{ scale: 1.02, x: 4 }}
+                          className="flex items-center gap-4 p-4 rounded-xl bg-[color:var(--panel-2)] border border-[color:var(--line)] cursor-pointer"
+                        >
                           <div className="w-10 h-10 rounded-lg bg-[color:var(--accent-2)]/20 flex items-center justify-center">
                             <ShieldCheck className="w-5 h-5 text-[color:var(--accent-2)]" />
                           </div>
@@ -91,7 +95,7 @@ export const Features = () => {
                             <div className="text-sm font-medium text-[color:var(--foreground)]">{item.title}</div>
                             <div className="text-xs text-[color:var(--muted)] mt-1">{item.desc}</div>
                           </div>
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   </div>
@@ -111,7 +115,7 @@ export const Features = () => {
               <div className="order-2 md:order-1 hidden md:block">
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-br from-[color:var(--accent)]/10 to-[color:var(--accent-2)]/10 rounded-3xl blur-2xl" />
-                  <div className="relative rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 shadow-lg">
+                  <div className="relative rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 shadow-lg card-interactive">
                     <div className="grid grid-cols-2 gap-4">
                       {[
                         { label: 'Alpha Signals', value: '+24%' },
@@ -119,11 +123,15 @@ export const Features = () => {
                         { label: 'Sharpe Ratio', value: '2.1' },
                         { label: 'Max Drawdown', value: '-8%' }
                       ].map((item, idx) => (
-                        <div key={idx} className="p-4 rounded-xl bg-gradient-to-br from-[color:var(--accent)]/10 to-[color:var(--accent-2)]/10 border border-[color:var(--accent)]/20 text-center">
+                        <motion.div 
+                          key={idx} 
+                          whileHover={{ scale: 1.05, y: -4 }}
+                          className="p-4 rounded-xl bg-gradient-to-br from-[color:var(--accent)]/10 to-[color:var(--accent-2)]/10 border border-[color:var(--accent)]/20 text-center cursor-pointer"
+                        >
                           <TrendingUp className="w-6 h-6 text-[color:var(--accent)] mx-auto mb-2" />
                           <div className="text-lg font-bold text-[color:var(--foreground)]">{item.value}</div>
                           <div className="text-xs text-[color:var(--muted)] mt-1">{item.label}</div>
-                        </div>
+                        </motion.div>
                       ))}
                     </div>
                   </div>

@@ -84,13 +84,14 @@ export const Capabilities = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {capabilities.map((cap, i) => (
                 <motion.div 
-                  key={cap.id} 
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.15 }}
-                  className="relative"
-                >
+                    key={cap.id} 
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: i * 0.15 }}
+                    className="relative p-6 rounded-2xl bg-[color:var(--panel)] border border-[color:var(--line)] card-interactive cursor-pointer"
+                  >
                   {/* Step number badge */}
                   <div className="hidden lg:flex absolute -top-3 -left-3 w-8 h-8 rounded-full bg-[color:var(--panel)] border border-[color:var(--line)] items-center justify-center z-10">
                     <span className="text-sm font-bold text-[color:var(--muted)]">{i + 1}</span>

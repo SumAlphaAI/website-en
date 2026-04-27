@@ -22,24 +22,24 @@ const TimelineLayer = ({
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress: layerProgress } = useScroll({
     target: ref,
-    offset: ['start end', 'center center']
+    offset: ['start end', 'end 0.7']
   });
 
-  const scaleX = useTransform(layerProgress, [0, 0.5], [0.3, 1]);
-  const opacity = useTransform(layerProgress, [0, 0.2, 0.5], [0.3, 0.6, 1]);
+  const scaleX = useTransform(layerProgress, [0, 0.3], [0.3, 1]);
+  const opacity = useTransform(layerProgress, [0, 0.1, 0.3], [0.3, 0.6, 1]);
   const translateX = useTransform(
     layerProgress, 
-    [0, 0.5], 
+    [0, 0.3], 
     index % 2 === 0 ? [-60, 0] : [60, 0]
   );
-  const rotateY = useTransform(layerProgress, [0, 0.5], [8, 0]);
-  const scale = useTransform(layerProgress, [0, 0.5], [0.9, 1]);
+  const rotateY = useTransform(layerProgress, [0, 0.3], [8, 0]);
+  const scale = useTransform(layerProgress, [0, 0.3], [0.9, 1]);
 
-  const smoothScaleX = useSpring(scaleX, { stiffness: 80, damping: 25, restDelta: 0.001 });
-  const smoothOpacity = useSpring(opacity, { stiffness: 80, damping: 25, restDelta: 0.001 });
-  const smoothTranslateX = useSpring(translateX, { stiffness: 80, damping: 25, restDelta: 0.001 });
-  const smoothRotateY = useSpring(rotateY, { stiffness: 80, damping: 25, restDelta: 0.001 });
-  const smoothScale = useSpring(scale, { stiffness: 80, damping: 25, restDelta: 0.001 });
+  const smoothScaleX = useSpring(scaleX, { stiffness: 300, damping: 40, restDelta: 0.001 });
+  const smoothOpacity = useSpring(opacity, { stiffness: 300, damping: 40, restDelta: 0.001 });
+  const smoothTranslateX = useSpring(translateX, { stiffness: 300, damping: 40, restDelta: 0.001 });
+  const smoothRotateY = useSpring(rotateY, { stiffness: 300, damping: 40, restDelta: 0.001 });
+  const smoothScale = useSpring(scale, { stiffness: 300, damping: 40, restDelta: 0.001 });
 
   return (
     <motion.div 
@@ -60,10 +60,10 @@ const TimelineLayer = ({
         />
       </div>
 
-      <div className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center ${index % 2 === 1 ? 'md:direction-rtl' : ''}`}>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         {/* Content side */}
         <motion.div 
-          className={index % 2 === 1 ? 'md:order-2' : ''}
+          className="order-2 md:order-none"
           style={{
             x: smoothTranslateX,
             opacity: smoothOpacity,
@@ -82,8 +82,8 @@ const TimelineLayer = ({
           </motion.div>
           <motion.h3 
             className="text-2xl md:text-3xl font-semibold text-[color:var(--foreground)] mb-3"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
@@ -91,8 +91,8 @@ const TimelineLayer = ({
           </motion.h3>
           <motion.p 
             className="text-[color:var(--muted)] text-lg leading-relaxed"
-            initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
@@ -102,7 +102,7 @@ const TimelineLayer = ({
 
         {/* Visual side */}
         <motion.div 
-          className={index % 2 === 1 ? 'md:order-1' : ''}
+          className="order-1 md:order-none"
           style={{
             x: smoothTranslateX,
             opacity: smoothOpacity,
@@ -120,7 +120,7 @@ const TimelineLayer = ({
               }} 
             />
             <motion.div 
-              className="relative rounded-2xl border border-[color:var(--line)] bg-[color:var(--panel)] p-6 shadow-lg overflow-hidden"
+              className="relative rounded-2xl border border-[color:var(--line)] bg-[color:var(--panel)] p-6 shadow-lg overflow-hidden card-interactive"
               style={{
                 scaleX: smoothScaleX,
                 transformOrigin: index % 2 === 0 ? 'left' : 'right'

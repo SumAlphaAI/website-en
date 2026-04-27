@@ -130,9 +130,9 @@ export const TradFiEcosystem = () => {
                 transition={{ duration: 0.6, delay: i * 0.1 }}
                 className="relative"
               >
-                <div className={`grid md:grid-cols-2 gap-8 md:gap-16 items-center ${i % 2 === 1 ? 'md:direction-rtl' : ''}`}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
                   {/* Content side */}
-                  <div className={i % 2 === 1 ? 'md:order-2' : ''}>
+                  <div className="order-2 md:order-none">
                     <div className={`inline-flex items-center gap-3 px-4 py-2 rounded-xl mb-4 ${item.bg} ${item.color} border ${item.border}`}>
                       <item.icon className="w-5 h-5" />
                       <span className="text-sm font-bold">{item.title}</span>
@@ -143,8 +143,8 @@ export const TradFiEcosystem = () => {
                       {item.features.map((feature, idx) => (
                         <motion.li 
                           key={idx}
-                          initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
+                          initial={{ opacity: 0, y: 10 }}
+                          whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.3, delay: idx * 0.1 }}
                           className="flex items-center gap-2 text-[color:var(--foreground)]/80"
@@ -157,7 +157,7 @@ export const TradFiEcosystem = () => {
                   </div>
 
                   {/* Visual side */}
-                  <div className={i % 2 === 1 ? 'md:order-1' : ''}>
+                  <div className="order-1 md:order-none">
                     <div className="relative">
                       <div className="absolute inset-0 rounded-2xl blur-2xl" style={{ background: `linear-gradient(135deg, ${item.glow}10, transparent)` }} />
                       <div className="relative rounded-2xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 shadow-lg">

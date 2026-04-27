@@ -42,12 +42,25 @@
   --shadow: 0 20px 60px rgba(11, 18, 32, 0.10);
 }
 
+[data-theme="dark"] {
+  --background: #050a14;
+  --foreground: #e8ecf4;
+  --muted: #7a8ba8;
+  --line: rgba(100, 140, 200, 0.15);
+  --panel: #0a1224;
+  --panel-2: #111b30;
+  --accent: #00d4ff;
+  --accent-2: #0ea5e9;
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.50);
+}
+
 body {
   position: relative;
   background-color: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui;
   letter-spacing: -0.01em;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Background texture: SaaS grid + soft tint */
@@ -66,6 +79,17 @@ body::after {
   background-size: auto, auto, auto, 96px 96px, 96px 96px;
   background-position: center, center, center, -1px -1px, -1px -1px;
   opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+[data-theme="dark"] body::after {
+  background-image:
+    radial-gradient(800px circle at 15% 5%, color-mix(in oklab, var(--accent) 8%, transparent) 0%, transparent 55%),
+    radial-gradient(700px circle at 85% 12%, color-mix(in oklab, var(--accent-2) 6%, transparent) 0%, transparent 60%),
+    radial-gradient(500px circle at 50% 80%, color-mix(in oklab, var(--accent) 4%, transparent) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(0,212,255,0.03) 0%, rgba(0,212,255,0.0) 40%),
+    linear-gradient(to right, rgba(100,140,200,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(100,140,200,0.04) 1px, transparent 1px);
 }
 
 ::selection {
@@ -108,7 +132,7 @@ body::after {
   }
 }
 
-/* Buttons (quiet, product-y, not “gradient capsule”) */
+/* Buttons (quiet, product-y, not "gradient capsule") */
 .btn, .btn-sm {
   @apply inline-flex items-center justify-center whitespace-nowrap transition duration-150 ease-in-out font-medium;
   border-radius: 999px;
@@ -217,4 +241,65 @@ html {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  @apply inline-flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--foreground);
+}
+
+.theme-toggle:hover {
+  background: var(--panel-2);
+  transform: scale(1.1);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+/* Interactive elements hover effects */
+.interactive-hover {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.interactive-hover:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: var(--shadow);
+}
+
+/* Navbar link hover effect */
+.nav-link {
+  @apply font-medium text-sm text-[color:var(--muted)] transition-all duration-200 ease-in-out relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 w-0 h-0.5 transition-all duration-300 ease-in-out;
+  background: var(--accent);
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--foreground);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Card hover animation */
+.card-interactive {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.card-interactive:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] .card-interactive:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }

@@ -33,7 +33,7 @@ export const Hero = () => {
             >
                 <div className="inline-flex">
                     <Link
-                      className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-white/70 px-4 py-2 text-sm text-[color:var(--muted)] shadow-sm hover:bg-white hover:shadow-md transition-all duration-300"
+                      className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-[color:var(--panel)]/70 px-4 py-2 text-sm text-[color:var(--muted)] shadow-sm hover:bg-[color:var(--panel)] hover:shadow-md transition-all duration-300"
                       href="#"
                     >
                         <span className="relative inline-flex items-center">
