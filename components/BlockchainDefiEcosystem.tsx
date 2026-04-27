@@ -1,7 +1,7 @@
 'use client';
 
 import type { ComponentType } from 'react';
-import { ShieldCheck, LockKeyhole, Workflow, Wallet, Search, CreditCard, Code2, Globe, Network, ArrowRight, ChevronDown } from 'lucide-react';
+import { ShieldCheck, LockKeyhole, Workflow, Wallet, Search, CreditCard, Code2, Globe, ArrowRight, ChevronDown } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 type BrandItem = {
@@ -196,12 +196,6 @@ export const BlockchainDefiEcosystem = () => {
             >
               <div className="grid md:grid-cols-3 gap-8 items-center">
                 <div className="md:col-span-1">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[color:var(--accent)]/20 to-[color:var(--accent-2)]/20 border border-[color:var(--accent)]/30 mb-4">
-                    <Network className="w-8 h-8 text-[color:var(--accent)]" />
-                  </div>
-                  <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 border border-[color:var(--line)] text-[color:var(--muted)]">
-                    STEP 1
-                  </div>
                   <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--foreground)] mb-3">Mainnet Coverage</h3>
                   <p className="text-[color:var(--muted)] text-base leading-relaxed">
                     Comprehensive support spanning major EVM networks, high-performance L1s like Solana and Sui, plus specialized app chains.
@@ -282,12 +276,6 @@ export const BlockchainDefiEcosystem = () => {
                     </div>
                   </div>
                   <div className="order-1 md:order-2">
-                    <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[color:var(--accent-2)]/20 to-[color:var(--accent)]/20 border border-[color:var(--accent-2)]/30 mb-4">
-                      <Workflow className="w-8 h-8 text-[color:var(--accent-2)]" />
-                    </div>
-                    <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 border border-[color:var(--line)] text-[color:var(--muted)]">
-                      STEP 2
-                    </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--foreground)] mb-3">DeFi Protocol Surface</h3>
                     <p className="text-[color:var(--muted)] text-base leading-relaxed">
                       A unified set of execution and unsigned transaction building logic tailored for DeFi protocols, spanning DEXs, aggregators, lending, and derivatives.
@@ -311,12 +299,6 @@ export const BlockchainDefiEcosystem = () => {
               className="relative"
             >
               <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[color:var(--accent)]/20 to-[color:var(--accent-2)]/20 border border-[color:var(--accent)]/30 mb-4 mx-auto">
-                  <Code2 className="w-8 h-8 text-[color:var(--accent)]" />
-                </div>
-                <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 border border-[color:var(--line)] text-[color:var(--muted)]">
-                  STEP 3
-                </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--foreground)] mb-3">Advanced Capability Matrix</h3>
                 <p className="max-w-2xl mx-auto text-[color:var(--muted)] text-base leading-relaxed">
                   Core infrastructure providing deep protocol integration, semantic skill retrieval, dynamic SOPs, multi-chain transaction building, and secure Web3 delegation.
@@ -365,12 +347,6 @@ export const BlockchainDefiEcosystem = () => {
               className="relative"
             >
               <div className="text-center mb-12">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[color:var(--accent-2)]/20 to-[color:var(--accent)]/20 border border-[color:var(--accent-2)]/30 mb-4 mx-auto">
-                  <ShieldCheck className="w-8 h-8 text-[color:var(--accent-2)]" />
-                </div>
-                <div className="inline-block px-3 py-1 rounded-full text-xs font-bold mb-3 border border-[color:var(--line)] text-[color:var(--muted)]">
-                  STEP 4
-                </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-[color:var(--foreground)] mb-3">Desktop and Web AaaS Wallet Model</h3>
                 <p className="max-w-2xl mx-auto text-[color:var(--muted)] text-base leading-relaxed">
                   The security boundary follows the wallet architecture proposal: local signing for Desktop, MPC-assisted delegation for Web AaaS, and risk-first control before any write path reaches the chain.
