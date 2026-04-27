@@ -260,9 +260,9 @@ export const Ecosystem = () => {
                 icon: Hand,
                 title: t.ecosystem.layers.execution.title,
                 desc: t.ecosystem.layers.execution.desc,
-                accent: 'var(--foreground)',
-                color: 'text-[color:var(--foreground)]',
-                bg: 'bg-[color:var(--foreground)]/10',
+                accent: 'var(--accent)',
+                color: 'text-[color:var(--accent)]',
+                bg: 'bg-[color:var(--accent)]/10',
               }
             ].map((layer, i) => (
               <TimelineLayer 

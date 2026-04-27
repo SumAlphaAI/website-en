@@ -32,21 +32,21 @@ export const Capabilities = () => {
       id: 'execution', 
       data: t.capabilities.phases.execution, 
       icon: Zap,
-      color: 'text-[color:var(--foreground)]',
-      bgColor: 'bg-[color:var(--foreground)]/10',
-      borderColor: 'border-[color:var(--foreground)]/30',
-      bulletColor: 'bg-[color:var(--foreground)]',
-      glow: 'var(--foreground)'
+      color: 'text-[color:var(--accent-2)]',
+      bgColor: 'bg-[color:var(--accent-2)]/10',
+      borderColor: 'border-[color:var(--accent-2)]/30',
+      bulletColor: 'bg-[color:var(--accent-2)]',
+      glow: 'var(--accent-2)'
     },
     { 
       id: 'risk', 
       data: t.capabilities.phases.risk, 
       icon: ShieldCheck,
-      color: 'text-[color:var(--muted)]',
-      bgColor: 'bg-[color:var(--muted)]/10',
-      borderColor: 'border-[color:var(--muted)]/30',
-      bulletColor: 'bg-[color:var(--muted)]',
-      glow: 'var(--muted)'
+      color: 'text-[color:var(--accent)]',
+      bgColor: 'bg-[color:var(--accent)]/10',
+      borderColor: 'border-[color:var(--accent)]/30',
+      bulletColor: 'bg-[color:var(--accent)]',
+      glow: 'var(--accent)'
     }
   ];
 
@@ -79,7 +79,7 @@ export const Capabilities = () => {
           {/* Horizontal step flow */}
           <div className="relative">
             {/* Connection line */}
-            <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-[color:var(--accent-2)]/30 via-[color:var(--accent)]/30 to-[color:var(--muted)]/30" />
+            <div className="hidden lg:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-[color:var(--accent-2)]/30 via-[color:var(--accent)]/30 to-[color:var(--accent-2)]/30" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {capabilities.map((cap, i) => (
@@ -109,7 +109,7 @@ export const Capabilities = () => {
 
                   {/* Content */}
                   <div className="text-center">
-                    <div className={`inline-block px-3 py-1 rounded-md ${cap.bgColor} ${cap.color} text-xs font-bold uppercase tracking-wider mb-3`}>
+                    <div className={`inline-block px-3 py-1 rounded-md ${cap.bgColor} ${cap.color} text-xs font-bold uppercase tracking-wider mb-3 min-h-[24px]`}>
                       {cap.data.title}
                     </div>
                     <h3 className="text-xl font-semibold text-[color:var(--foreground)] mb-2">{cap.data.subtitle}</h3>
