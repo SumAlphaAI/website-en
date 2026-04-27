@@ -87,7 +87,7 @@ export const Navbar = () => {
             {/* Hamburger button */}
             <button
               ref={trigger}
-              className={`group inline-flex w-8 h-8 text-slate-300 hover:text-white text-center items-center justify-center transition ${mobileNavOpen && 'active'}`}
+              className={`group inline-flex w-8 h-8 text-[color:var(--muted)] hover:text-[color:var(--foreground)] text-center items-center justify-center transition ${mobileNavOpen && 'active'}`}
               aria-controls="mobile-nav"
               aria-expanded={mobileNavOpen}
               onClick={() => setMobileNavOpen(!mobileNavOpen)}
