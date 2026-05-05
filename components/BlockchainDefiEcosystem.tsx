@@ -178,9 +178,9 @@ export const BlockchainDefiEcosystem = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mt-8 flex flex-wrap justify-center gap-3"
           >
-            <StatPill label="Chains Supported" value="15" />
-            <StatPill label="DeFi Protocols" value="30" />
-            <StatPill label="Agent Skills" value="45" />
+            <StatPill label="Chains Supported" value="12" />
+            <StatPill label="DeFi Protocols" value="20" />
+            <StatPill label="Agent Skills" value="35" />
           </motion.div>
 
           {/* Step-by-step flow layout */}
@@ -202,7 +202,7 @@ export const BlockchainDefiEcosystem = () => {
                   </p>
                 </div>
                 <div className="md:col-span-2">
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                     {liveChains.map((item, i) => (
                       <motion.div 
                         key={item.name}
@@ -210,19 +210,19 @@ export const BlockchainDefiEcosystem = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.4, delay: i * 0.1 }}
-                        className="rounded-xl border border-[color:var(--line)] bg-[color:var(--panel)] p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                        className="rounded-xl border border-[color:var(--line)] bg-[color:var(--panel)] p-3 sm:p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                         style={{ boxShadow: `inset 0 0 0 1px ${item.color}12` }}
                       >
-                        <div className="flex items-start gap-3">
+                        <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-3">
                           <div
-                            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[color:var(--line)] bg-[color:var(--panel-2)]"
+                            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-[color:var(--line)] bg-[color:var(--panel-2)] sm:h-10 sm:w-10 sm:rounded-lg"
                             style={{ boxShadow: `0 0 0 1px ${item.color}22, 0 0 20px ${item.color}20` }}
                           >
-                            <item.icon className="h-5 w-5" />
+                            <item.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                           </div>
-                          <div className="min-w-0">
-                            <h4 className="font-semibold text-[color:var(--foreground)] text-sm">{item.name}</h4>
-                            <p className="mt-1 text-xs leading-5 text-[color:var(--muted)]">{item.summary}</p>
+                          <div className="min-w-0 flex-1">
+                            <h4 className="text-[13px] font-semibold leading-5 text-[color:var(--foreground)] break-words sm:text-sm">{item.name}</h4>
+                            <p className="mt-0.5 text-[11px] leading-4 text-[color:var(--muted)] break-words sm:mt-1 sm:text-xs sm:leading-5">{item.summary}</p>
                           </div>
                         </div>
                       </motion.div>
@@ -248,7 +248,7 @@ export const BlockchainDefiEcosystem = () => {
               <div className="rounded-3xl border border-[color:var(--line)] bg-[color:var(--panel)] p-8 md:p-12">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="order-2 md:order-1">
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4">
                       {liveProtocols.map((item, i) => (
                         <motion.div 
                           key={item.name}
@@ -256,19 +256,19 @@ export const BlockchainDefiEcosystem = () => {
                           whileInView={{ opacity: 1, scale: 1 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: i * 0.1 }}
-                          className="rounded-xl border border-[color:var(--line)] bg-[color:var(--panel)] p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+                          className="rounded-xl border border-[color:var(--line)] bg-[color:var(--panel)] p-3 sm:p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
                           style={{ boxShadow: `inset 0 0 0 1px ${item.color}12` }}
                         >
-                          <div className="flex items-start gap-3">
+                          <div className="flex flex-col gap-2.5 sm:flex-row sm:items-start sm:gap-3">
                             <div
-                              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-[color:var(--line)] bg-[color:var(--panel-2)]"
+                              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-md border border-[color:var(--line)] bg-[color:var(--panel-2)] sm:h-10 sm:w-10 sm:rounded-lg"
                               style={{ boxShadow: `0 0 0 1px ${item.color}22, 0 0 20px ${item.color}20` }}
                             >
-                              <item.icon className="h-5 w-5" />
+                              <item.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                             </div>
-                            <div className="min-w-0">
-                              <h4 className="font-semibold text-[color:var(--foreground)] text-sm">{item.name}</h4>
-                              <p className="mt-1 text-xs leading-5 text-[color:var(--muted)]">{item.summary}</p>
+                            <div className="min-w-0 flex-1">
+                              <h4 className="text-[13px] font-semibold leading-5 text-[color:var(--foreground)] break-words sm:text-sm">{item.name}</h4>
+                              <p className="mt-0.5 text-[11px] leading-4 text-[color:var(--muted)] break-words sm:mt-1 sm:text-xs sm:leading-5">{item.summary}</p>
                             </div>
                           </div>
                         </motion.div>
